@@ -1,0 +1,152 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "Hack Nerd Font Mono", monospace;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar.empty #window {  
+ background:none;  
+ border: none;
+}     
+
+window#waybar {
+    background: rgba(46, 52, 64, 0); /* Nord Polar Night */
+    color: #D8DEE9; /* Nord Snow Storm */
+}
+
+tooltip {
+    background: #3B4252; /* Nord Polar Night */
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #2E3440; /* Nord Polar Night */
+}
+
+#workspaces button {
+    padding: 5px;
+    color: #4C566A; /* Nord Polar Night */
+    margin-right: 5px;
+}
+
+#workspaces button.active {
+    color: #D8DEE9; /* Nord Snow Storm */
+}
+
+#workspaces button.focused {
+    color: #D8DEE9; /* Nord Snow Storm */
+    background: #5E81AC; /* Nord Frost */
+    border-radius: 10px;
+}
+
+#workspaces button.urgent {
+    color: #2E3440; /* Nord Polar Night */
+    background: #A3BE8C; /* Nord Frost Green */
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    background: #2E3440; /* Nord Polar Night */
+    color: #D8DEE9; /* Nord Snow Storm */
+    border-radius: 10px;
+}
+
+#custom-language,
+#custom-updates,
+#custom-caffeine,
+#custom-weather,
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#workspaces,
+#tray,
+#backlight {
+    background: #2E3440; /* Nord Polar Night */
+    padding: 0px 10px;
+    margin: 3px 0px;
+    margin-top: 10px;
+    border: 0px solid #434C5E; /* Nord Polar Night */
+}
+
+#tray {
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#workspaces {
+    background: #2E3440; /* Nord Polar Night */
+    border-radius: 10px;
+    margin-left: 10px;
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+#custom-caffeine {
+    color: #D8DEE9; /* Nord Snow Storm */
+    border-radius: 10px 0px 0px 10px;
+    border-right: 0px;
+    margin-left: 10px;
+}
+
+#custom-language {
+    color: #D8DEE9; /* Nord Snow Storm */
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#custom-updates {
+    color: #D8DEE9; /* Nord Snow Storm */
+    border-radius: 10px 0px 0px 10px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#window {
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#clock {
+    color: #D8DEE9; /* Nord Snow Storm */
+    border-radius: 10px 0px 0px 10px;
+    margin-left: 5px;
+    border-right: 0px;
+}
+
+#network {
+    color: #D8DEE9; /* Nord Snow Storm */
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#pulseaudio {
+    color: #D8DEE9; /* Nord Snow Storm */
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#pulseaudio.microphone {
+    color: #D8DEE9; /* Nord Snow Storm */
+    border-radius: 0px 10px 10px 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-right: 5px;
+}
+
+#battery {
+    color: #D8DEE9; /* Nord Snow Storm */
+    /* border-radius: 0 10px 10px 0; */
+    margin-right: 0;
+    border-left: 0px;
+}
+
+#custom-weather {
+    border-radius: 0px 10px 10px 0px;
+    border-right: 0px;
+    margin-left: 0px;
+}
