@@ -8,8 +8,8 @@
 }
 
 window#waybar.empty #window {  
- background:none;  
- border: none;
+    background: none;  
+    border: none;
 }     
 
 window#waybar {
@@ -53,24 +53,30 @@ tooltip {
     border-radius: 10px;
 }
 
-#custom-language,
-#custom-updates,
-#custom-caffeine,
-#custom-weather,
 #window,
-#clock,
 #battery,
 #pulseaudio,
 #network,
 #workspaces,
 #tray,
 #backlight {
-    background: #2E3440; /* Nord Polar Night */
+    background: rgba(46, 52, 64, 0.85); /* Nord Polar Night */
     padding: 0px 10px;
     margin: 3px 0px;
     margin-top: 10px;
     border: 0px solid #434C5E; /* Nord Polar Night */
 }
+
+#clock,
+#custom-kb-layout,
+#custom-weather {
+    background: rgba(46, 52, 64, 0.85); /* Nord Polar Night */
+    padding: 0px 10px;
+    margin: 3px 0px;
+    margin-top: 10px;
+    border: 0px solid #434C5E; /* Nord Polar Night */
+}
+
 
 #tray {
     border-radius: 10px;
@@ -78,31 +84,23 @@ tooltip {
 }
 
 #workspaces {
-    background: #2E3440; /* Nord Polar Night */
+    background: rgba(46, 52, 64, 0.85); /* Nord Polar Night */
     border-radius: 10px;
     margin-left: 10px;
     padding-right: 0px;
     padding-left: 5px;
 }
 
-#custom-caffeine {
+#custom-kb-layout {
     color: #D8DEE9; /* Nord Snow Storm */
-    border-radius: 10px 0px 0px 10px;
-    border-right: 0px;
-    margin-left: 10px;
 }
 
-#custom-language {
-    color: #D8DEE9; /* Nord Snow Storm */
-    border-left: 0px;
-    border-right: 0px;
+#custom-kb-layout.us {
+    color: #88C0D0; /* Nord Frost Blue */
 }
 
-#custom-updates {
-    color: #D8DEE9; /* Nord Snow Storm */
-    border-radius: 10px 0px 0px 10px;
-    border-left: 0px;
-    border-right: 0px;
+#custom-kb-layout.se {
+    color: #A3BE8C; /* Nord Frost Green */
 }
 
 #window {
@@ -140,13 +138,11 @@ tooltip {
 
 #battery {
     color: #D8DEE9; /* Nord Snow Storm */
-    /* border-radius: 0 10px 10px 0; */
+    border-radius: 10px 0 0 10px;
     margin-right: 0;
     border-left: 0px;
 }
 
-#custom-weather {
+#custom-kb-layout:last-child {
     border-radius: 0px 10px 10px 0px;
-    border-right: 0px;
-    margin-left: 0px;
 }
