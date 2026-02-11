@@ -74,7 +74,7 @@ data = {
 }
 
 # Add forecast
-for i, day in enumerate(weather["weather"][:2]):  # Only today and tomorrow
+for i, day in enumerate(weather["weather"][:2]):
     day_name = "Today" if i == 0 else "Tomorrow"
     data["tooltip"] += f"\n<b>{day_name}, {day['date']}</b>\n"
     data["tooltip"] += f"⬆️ {day['maxtempC']}°C ⬇️ {day['mintempC']}°C "
@@ -82,15 +82,13 @@ for i, day in enumerate(weather["weather"][:2]):  # Only today and tomorrow
         f"🌅 {day['astronomy'][0]['sunrise']} 🌇 {day['astronomy'][0]['sunset']}\n"
     )
 
-    # Show relevant hours only
     for hour in day["hourly"]:
-        hour_time = int(hour["time"].replace("00", "") or "0")
-        if i == 0 and hour_time < current_hour - 2:  # Skip past hours for today
+        hour_time = int(hour["time"]) // 100  # Better parsing
+        if i == 0 and hour_time < current_hour - 2:
             continue
-
         icon = WEATHER_ICONS.get(hour["weatherCode"], "❓")
         data["tooltip"] += (
-            f"{hour_time:02d} {icon} {hour['FeelsLikeC']}°C {hour['weatherDesc'][0]['value']}\n"
+            f"{hour_time:02d}:00 {icon} {hour['FeelsLikeC']}°C {hour['weatherDesc'][0]['value']}\n"
         )
 
 print(json.dumps(data))

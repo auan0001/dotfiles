@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Hack Nerd Font Mono", monospace;
+    font-family: "Zenbones Mono";
     font-weight: bold;
     font-size: 14px;
     min-height: 0;
@@ -11,10 +11,9 @@ window#waybar.empty #window {
     background: none;  
     border: none;
 }     
-
 window#waybar {
-    background: rgba(46, 52, 64, 0); /* Nord Polar Night */
-    color: #D8DEE9; /* Nord Snow Storm */
+    background: rgba(46, 52, 64, 0);
+    color: #D8DEE9;
 }
 
 tooltip {
@@ -69,6 +68,7 @@ tooltip {
 
 #clock,
 #custom-kb-layout,
+#custom-org-todos,
 #custom-weather {
     background: rgba(46, 52, 64, 0.85); /* Nord Polar Night */
     padding: 0px 10px;
@@ -138,9 +138,27 @@ tooltip {
 
 #battery {
     color: #D8DEE9; /* Nord Snow Storm */
+    font-size: 14px;
     border-radius: 10px 0 0 10px;
     margin-right: 0;
     border-left: 0px;
+}
+
+
+#custom-org-todos .today {
+    color: #88C0D0; /* Nord Blue - today's tasks */
+}
+
+#custom-org-todos .stale {
+    color: #BF616A; /* Nord Red - overdue tasks */
+}
+
+#custom-org-todos .closed {
+    color: #A3BE8C; /* Nord Green - completed tasks */
+}
+
+#custom-org-todos .empty {
+    color: #4C566A; /* Nord Gray - no tasks */
 }
 
 #custom-kb-layout:last-child {
