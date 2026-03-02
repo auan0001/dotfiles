@@ -12,9 +12,10 @@
     "custom/weather",
     "custom/org-todos",
     "custom/kb-layout",
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "hyprland/window"
   ],
-  "modules-center": ["hyprland/window"],
+  "modules-center": [],
   "modules-right": [
     "tray",
     "battery",
@@ -26,16 +27,15 @@
   "hyprland/window": {
     "format": "{}"
   },
-
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "on-click": "activate",
     "format": "{icon}",
     "format-icons": {
-        "1": "I",
-        "2": "II",
-        "3": "III"
+        "1": "1",
+        "2": "2",
+        "3": "3"
     }
   },
 
@@ -65,8 +65,8 @@
   },
 
   "tray": {
-    "icon-size": 13,
-    "spacing": 10,
+    "icon-size": 16,
+    "spacing": 8,
     "show-passive-items": true
   },
 

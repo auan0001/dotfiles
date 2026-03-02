@@ -12,8 +12,12 @@ window#waybar.empty #window {
     border: none;
 }     
 window#waybar {
-    background: rgba(46, 52, 64, 0);
+    background: transparent;
     color: #D8DEE9;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 tooltip {
@@ -28,28 +32,30 @@ tooltip {
     padding: 5px;
     color: #4C566A; /* Nord Polar Night */
     margin-right: 5px;
+    border-radius: 50%;
+    background: transparent;
+    min-width: 20px;
+    min-height: 20px;
 }
 
 #workspaces button.active {
     color: #D8DEE9; /* Nord Snow Storm */
+    background: transparent;
 }
 
 #workspaces button.focused {
     color: #D8DEE9; /* Nord Snow Storm */
-    background: #5E81AC; /* Nord Frost */
-    border-radius: 10px;
+    background: transparent;
 }
 
 #workspaces button.urgent {
-    color: #2E3440; /* Nord Polar Night */
-    background: #A3BE8C; /* Nord Frost Green */
-    border-radius: 10px;
+    color: #BF616A; /* Nord Red for urgency */
+    background: transparent;
 }
 
 #workspaces button:hover {
-    background: #2E3440; /* Nord Polar Night */
+    background: rgba(46, 52, 64, 0.6); /* Nord Polar Night with transparency */
     color: #D8DEE9; /* Nord Snow Storm */
-    border-radius: 10px;
 }
 
 #window,
@@ -58,34 +64,24 @@ tooltip {
 #network,
 #workspaces,
 #tray,
-#backlight {
-    background: rgba(46, 52, 64, 0.85); /* Nord Polar Night */
-    padding: 0px 10px;
-    margin: 3px 0px;
-    margin-top: 10px;
-    border: 0px solid #434C5E; /* Nord Polar Night */
-}
-
+#backlight,
 #clock,
 #custom-kb-layout,
 #custom-org-todos,
 #custom-weather {
-    background: rgba(46, 52, 64, 0.85); /* Nord Polar Night */
-    padding: 0px 10px;
+    background: transparent;
+    padding: 0px 6px;
     margin: 3px 0px;
-    margin-top: 10px;
-    border: 0px solid #434C5E; /* Nord Polar Night */
+    border: 0px;
 }
 
 
 #tray {
-    border-radius: 10px;
     margin-right: 10px;
 }
 
 #workspaces {
-    background: rgba(46, 52, 64, 0.85); /* Nord Polar Night */
-    border-radius: 10px;
+    background: transparent;
     margin-left: 10px;
     padding-right: 0px;
     padding-left: 5px;
@@ -104,14 +100,12 @@ tooltip {
 }
 
 #window {
-    border-radius: 10px;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 #clock {
     color: #D8DEE9; /* Nord Snow Storm */
-    border-radius: 10px 0px 0px 10px;
     margin-left: 5px;
     border-right: 0px;
 }
@@ -130,7 +124,6 @@ tooltip {
 
 #pulseaudio.microphone {
     color: #D8DEE9; /* Nord Snow Storm */
-    border-radius: 0px 10px 10px 0px;
     border-left: 0px;
     border-right: 0px;
     margin-right: 5px;
@@ -139,7 +132,6 @@ tooltip {
 #battery {
     color: #D8DEE9; /* Nord Snow Storm */
     font-size: 14px;
-    border-radius: 10px 0 0 10px;
     margin-right: 0;
     border-left: 0px;
 }
@@ -161,6 +153,3 @@ tooltip {
     color: #4C566A; /* Nord Gray - no tasks */
 }
 
-#custom-kb-layout:last-child {
-    border-radius: 0px 10px 10px 0px;
-}
