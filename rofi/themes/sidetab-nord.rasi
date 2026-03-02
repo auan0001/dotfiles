@@ -1,52 +1,75 @@
 * {
-    background: #1e222a;
-    foreground: #E5E9F0;
-    border-color: @background;
-    bg-selected: #282c34;
-    grey: #565c64;
+    background: #282c34;
+    foreground: #abb2bf;
+    border-color: #32363e;
+    bg-selected: #5c6370;
+    bg-active: #61afef;
+    grey: #636d83;
+    red: #e06c75;
+    orange: #d19a66;
+    yellow: #e5c07b;
+    green: #98c379;
+    cyan: #56b6c2;
+    blue: #61afef;
+    purple: #c678dd;
     spacing: 2;
-    width: 30em;
     margin: 0;
     padding: 0;
 }
 
 #window {
     background-color: @background;
-    border: 0;
+    border: 1px solid;
+    border-color: @border-color;
+    border-radius: 8px;
     padding: 0;
-    location: west;
-    anchor: west;
-    height: 100%;
-    margin: 0;
+    location: center;
+    anchor: center;
+    width: 60%;
+    height: 50%;
+    transparency: "real";
 }
 
 #mainbox {
     background-color: @background;
-    spacing: 10px;
-    margin: 10px 0 0 0;
-    width: 200px;
+    spacing: 0px;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 #inputbar {
     children: [prompt,entry];
     background-color: @background;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid;
+    margin: 0 0 10px 0;
 }
 
 #listview {
     background-color: @background;
-    fixed-height: true;
-    margin: 5px 0 0 10px;
+    fixed-height: false;
+    lines: 10;
+    columns: 4;
+    scrollbar: false;
+    spacing: 8px;
 }
 
 #element {
-    padding: 5px;
-    background-color: @background;
+    padding: 8px;
+    background-color: transparent;
     text-color: @foreground;
+    border-radius: 4px;
 }
 
 element selected {
     background-color: @bg-selected;
     text-color: @foreground;
+}
+
+element-text selected {
+    background-color: inherit;
+    text-color: inherit;
 }
 
 element-text {
@@ -61,18 +84,20 @@ element-icon {
 }
 
 #entry {
-   background-color: @background;
+   background-color: transparent;
    text-color: @foreground;
-   placeholder: "Search";
+   placeholder: "Search applications...";
    placeholder-color: @grey;
-   font: "Sora Regular 20";
+   font: "Zenbones Brainy 12";
+   expand: true;
+   cursor: text;
 }
 
 #prompt {
-   background-color: @background;
-   padding: 0 4px;
-   margin: 0 5px 0 0;
-   text-color: @foreground;
-   font: "Sora Regular 20";
+   background-color: transparent;
+   padding: 0 8px 0 0;
+   text-color: @blue;
+   font: "Zenbones Brainy 12";
+   str: ">";
 }
 
